@@ -28,19 +28,34 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* ==== LAYOUT STYLES ==== */
 #content {
-
+  display:flex;
+  flex-direction: column-reverse;
 }
 
 #three,
 #two,
 #one {
-
+  height:100vw;
 }
 
 @media screen and (min-width: 600px) {
-
+  #content{
+    display:flex;
+    flex-flow:row-reverse wrap-reverse;
+  }
+  #one,#two {
+    width:50vw;
+    height:50vw;
+  }
+  #three{
+    width:100vw;
+    height:100vw;
+  }
 }
 
 @media screen and (min-width: 800px) {
-
+  #one,#two,#three {
+    width:33.3333vw;
+    height:33.3333vw;
+  }
 }
