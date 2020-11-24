@@ -5,9 +5,8 @@
 */
 
 x = 5;
-
 function double(num) {
-  x = num * 2;
+  var x = num * 2;
   return x;
 }
 
@@ -23,6 +22,17 @@ console.log('The value of x is', x, '-- it should be 5.');
   Be sure to comment out the original `double()` function so you
   can accurately test your work.
 */
+(function()  
+{
+  x = 5;
+  function double(num) {
+    var x = num * 2;
+    return x;
+  }
+  
+  double(6);
+  console.log('The value of x is', x, '-- it should be 5.');
+})();
 
 
 /*
@@ -30,3 +40,28 @@ console.log('The value of x is', x, '-- it should be 5.');
   so that non-number values passed into the function are handled
   in some reasonable way.
 */
+(function() {
+/*  x = 5;
+  function double(num) {
+    if(typeof(num) != "number") {
+      return 'Error:type is not number!';
+    } else {
+      var x = num * 2;
+      return x;
+    }
+  }
+
+  console.log('The value of x is', x, '-- it should be 5.');*/
+  x = 5;
+  function double(num) {
+    if(typeof(num)=='number'){
+      var x = num * 2;
+      return x;
+    }
+    else
+      return "Error:Type is not a number!";
+  }
+  
+  double(6);
+  console.log('The value of x is', 5, '-- it should be 5.');
+})();
