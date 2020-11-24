@@ -49,9 +49,9 @@ console.log('The value of x is', x, '-- it should be 5.');
       return x;
     }
     else
-      return "Error:Type is not a number!";
+      return 'Error:Type is not a number!';
   }
   
   double(6);
-  console.log('The value of x is', 5, '-- it should be 5.');
+  console.log('The value of x is', x, '-- it should be 5.');
 })();
